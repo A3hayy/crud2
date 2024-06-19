@@ -16,17 +16,17 @@ const UserSchema=mongoose.Schema({
     course:String
 })
 const UserModel=mongoose.model('clients',UserSchema)
-{
-    const send =new UserModel({
-           name:'akash',
-          age:20,
-           course:'React JS'
+// {
+//     const send =new UserModel({
+//            name:'akash',
+//           age:20,
+//            course:'React JS'
 
-        })
-        send.save()
-        .then(()=>console.log('data inserted'))
-        .catch((err)=>console.log(err))
-}
+//         })
+//         send.save()
+//         .then(()=>console.log('data inserted'))
+//         .catch((err)=>console.log(err))
+// }
 app.get("/",(req,res)=>{
     UserModel.find({})
     .then((users) => res.json(users))
